@@ -2,15 +2,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>in.javahome</groupId>
-    <artifactId>myweb</artifactId>
+
+    <groupId>in.RAHAM</groupId>
+    <artifactId>NETFLIX</artifactId>
     <packaging>war</packaging>
-    <version>8.3.2-SNAPSHOT</version>
+    <version>1.2.2</version>
     <name>Java Home myweb</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <docker.image.prefix>kammana</docker.image.prefix>
+        <!-- Set the project's source and target Java version -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Set the project's encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -27,23 +33,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
+<distributionManagement>
         <snapshotRepository>
             <id>nexusRepo</id>
             <url>http://13.233.230.166:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
-        <repository>
+ <repository>
             <id>nexusRepo</id>
             <url>http://13.233.230.166:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
-
-    <pluginRepositories>
+<pluginRepositories>
         <pluginRepository>
             <id>maven1</id>
-            <name>Maven Central</name> <!-- Updated repository name -->
-            <url>https://repo.maven.apache.org/maven2</url> <!-- Updated repository URL -->
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
